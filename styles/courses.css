@@ -17,14 +17,12 @@ a {
 
 
 /* Cabeçalho */
-.header{
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: #fff;
-}
+#headerM{
+    background-color: #F8F9FA;
+    box-shadow:none;
+    width: 100%;
 
+}
 .navbar-brand h2 {
     font-weight: 700;
     color: #4e57d4;
