@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/perfil.css">
+    <title>Perfil | JovemTechEAD</title>
+</head>
+
+<body>
+    <div class="container-perfil">
+        <!-- Menu Lateral  -->
+        <Aside class="menu-lateral">
+            <img src="https://i.pinimg.com/736x/99/07/9f/99079fe0f11b5922409c995ff0a576bb.jpg" alt="Foto de Perfil"
+                class="foto-perfil">
+            <h2>Nome do Usuário</h2>
+            <nav>
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Módulos</a></li>
+                    <li><a href="#">Calendário</a></li>
+                    <li><a href="#">Certificados</a></li>
+                    <li><a href="#">Configurações</a></li>
+                </ul>
+            </nav>
+        </Aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="conteudo-principal">
+            <h1>Bem-vindo ao seu Perfil!</h1>
+
+            <!-- Aqui fica os conteúdos: progresso, cursos e eventos -->
+            <!-- Progresso Acadêmico -->
+            <section class="bloco">
+                <h2>Progresso Acadêmico</h2>
+                <p>Curso concluído: <strong>75%</strong></p>
+                <div class="barra-progresso">
+                    <div class="progresso" style="width: 75%;"></div>
+                </div>
+            </section>
+
+            <!-- Cursos Finalizados -->
+            <section class="bloco">
+                <h2>Módulos Finalizados</h2>
+                <ul class="lista-cursos">
+                    <li>HTML Básico 🏅</li>
+                    <li>CSS Intermediário 🏅</li>
+                    <li>Lógica de Programação 🏅</li>
+                </ul>
+            </section>
+
+            <!-- Agenda de Eventos -->
+            <section class="bloco">
+                <h2>Agenda de Eventos</h2>
+                <ul class="lista-eventos">
+                    <li><strong>20/04</strong> - Entrega do Projeto Final</li>
+                    <li><strong>25/04</strong> - Live: JavaScript para Iniciantes</li>
+                </ul>
+            </section>
+
+            <!-- Botão Editar Perfil -->
+            <section class="bloco">
+                <button onclick="editarPerfil()">Editar Perfil</button>
+            </section>
+
+        </main>
+    </div>
+</body>
+<script src="/assets/js/main.js"></script>
+
+</html>
