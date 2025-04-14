@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/comunity.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-2">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="brand-text">LearnFlow</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Site</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Mentors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Community</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Resources</a>
+                    </li>
+                </ul>
+                <div class="ms-auto d-flex align-items-center">
+                    <div class="position-relative me-3">
+                        <i class="far fa-bell notification-icon"></i>
+                        <span class="notification-badge"></span>
+                    </div>
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" class="avatar" alt="User Avatar">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <div class="container py-4">
+        <div class="row">
+            <!-- Coluna Principal (Discussões) -->
+            <div class="col-lg-8">
+                <h2 class="mb-4">Comunidade</h2>
+                
+                <!-- Abas de Navegação -->
+                <ul class="nav nav-tabs mb-3" id="discussionTabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="highlights-tab" data-bs-toggle="tab" href="#highlights">Destaques</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="recent-tab" data-bs-toggle="tab" href="#recent">Recente</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="unanswered-tab" data-bs-toggle="tab" href="#unanswered">Sem resposta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="categories-tab" data-bs-toggle="tab" href="#categories">Categorias</a>
+                    </li>
+                </ul>
+                
+                <!-- Botão Nova Postagem -->
+                <div class="d-flex justify-content-end mb-3">
+                    <button class="btn btn-primary rounded-pill" id="newPostBtn">
+                        <i class="fas fa-plus me-1"></i> Novo Post
+                    </button>
+                </div>
+                
+                <!-- Conteúdo das Abas -->
+                <div class="tab-content">
+                    <!-- Aba Destaques -->
+                    <div class="tab-pane fade show active" id="highlights">
+                        <!-- Post 1 -->
+                        <div class="post-card">
+                            <div class="d-flex">
+                                <img src="https://randomuser.me/api/portraits/men/45.jpg" class="post-avatar" alt="User Avatar">
+                                <div class="post-content">
+                                    <h5 class="post-title">Melhores práticas para organização de componentes React?</h5>
+                                    <div class="post-tags">
+                                        <span class="tag">React</span>
+                                        <span class="tag">Frontend</span>
+                                    </div>
+                                    <div class="post-stats">
+                                        <span><i class="far fa-comment"></i> 24 respostas</span>
+                                        <span><i class="far fa-clock"></i> 2 horas atrás</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Post 2 -->
+                        <div class="post-card">
+                            <div class="d-flex">
+                                <img src="https://randomuser.me/api/portraits/men/22.jpg" class="post-avatar" alt="User Avatar">
+                                <div class="post-content">
+                                    <h5 class="post-title">Como implementar autenticação em Node.js?</h5>
+                                    <div class="post-tags">
+                                        <span class="tag">NodeJS</span>
+                                        <span class="tag">Segurança</span>
+                                    </div>
+                                    <div class="post-stats">
+                                        <span><i class="far fa-comment"></i> 15 respostas</span>
+                                        <span><i class="far fa-clock"></i> 4 horas atrás</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Aba Recentes -->
+                    <div class="tab-pane fade" id="recent">
+                        <!-- Post 1 -->
+                        <div class="post-card">
+                            <div class="d-flex">
+                                <img src="https://randomuser.me/api/portraits/women/28.jpg" class="post-avatar" alt="User Avatar">
+                                <div class="post-content">
+                                    <h5 class="post-title">Dicas para otimizar consultas de banco de dados?</h5>
+                                    <div class="post-tags">
+                                        <span class="tag">Banco de Dados</span>
+                                        <span class="tag">Performance</span>
+                                    </div>
+                                    <div class="post-stats">
+                                        <span><i class="far fa-comment"></i> 8 respostas</span>
+                                        <span><i class="far fa-clock"></i> 1 hora atrás</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Post 2 -->
+                        <div class="post-card">
+                            <div class="d-flex">
+                                <img src="https://randomuser.me/api/portraits/men/22.jpg" class="post-avatar" alt="User Avatar">
+                                <div class="post-content">
+                                    <h5 class="post-title">Como implementar autenticação em Node.js?</h5>
+                                    <div class="post-tags">
+                                        <span class="tag">NodeJS</span>
+                                        <span class="tag">Segurança</span>
+                                    </div>
+                                    <div class="post-stats">
+                                        <span><i class="far fa-comment"></i> 15 respostas</span>
+                                        <span><i class="far fa-clock"></i> 4 horas atrás</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Aba Sem Resposta -->
+                    <div class="tab-pane fade" id="unanswered">
+                        <!-- Post 1 -->
+                        <div class="post-card">
+                            <div class="d-flex">
+                                <img src="https://randomuser.me/api/portraits/women/42.jpg" class="post-avatar" alt="User Avatar">
+                                <div class="post-content">
+                                    <h5 class="post-title">Como lidar com o estado em grandes aplicativos React?</h5>
+                                    <div class="post-tags">
+                                        <span class="tag">React</span>
+                                        <span class="tag">State Management</span>
+                                    </div>
+                                    <div class="post-stats">
+                                        <span><i class="far fa-comment"></i> 0 respostas</span>
+                                        <span><i class="far fa-clock"></i> 5 houras átras</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Aba Categorias -->
+                    <div class="tab-pane fade" id="categories">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="category-card">
+                                    <h5><i class="fas fa-code me-2"></i> Frontend Desenvolvimento</h5>
+                                    <p>React, Vue, Angular, CSS, HTML</p>
+                                    <span class="category-count">124 discussões</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="category-card">
+                                    <h5><i class="fas fa-server me-2"></i> Backend Desenvolvimento</h5>
+                                    <p>Node.js, Python, Java, Banco de Dados</p>
+                                    <span class="category-count">98 discussões</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="category-card">
+                                    <h5><i class="fas fa-mobile-alt me-2"></i>Desenvolvimento Mobile</h5>
+                                    <p>React Native, Flutter, Swift, Kotlin</p>
+                                    <span class="category-count">76 discussões</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="category-card">
+                                    <h5><i class="fas fa-shield-alt me-2"></i> Segurança</h5>
+                                    <p>Autenticação, Autorização, Melhores Práticas</p>
+                                    <span class="category-count">45 discussões</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Barra Lateral -->
+            <div class="col-lg-4">
+                <!-- Top Contributors -->
+                <div class="sidebar-card mb-4">
+                    <h4 class="sidebar-title">Top Contribuidores</h4>
+                    <div class="contributor-item">
+                        <div class="d-flex align-items-center">
+                            <span class="rank-number">#1</span>
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="contributor-avatar" alt="Contributor">
+                            <div class="contributor-info">
+                                <h6>Anderson Silva</h6>
+                                <span>1,234 pontos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contributor-item">
+                        <div class="d-flex align-items-center">
+                            <span class="rank-number">#2</span>
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="contributor-avatar" alt="Contributor">
+                            <div class="contributor-info">
+                                <h6>Sarah Chen</h6>
+                                <span>956 pontos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contributor-item">
+                        <div class="d-flex align-items-center">
+                            <span class="rank-number">#3</span>
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" class="contributor-avatar" alt="Contributor">
+                            <div class="contributor-info">
+                                <h6>Emma Wilson</h6>
+                                <span>845 pontos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Upcoming Events -->
+                <div class="sidebar-card">
+                    <h4 class="sidebar-title">Próximos eventos</h4>
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="event-month">Mar</span>
+                            <span class="event-day">15</span>
+                        </div>
+                        <div class="event-info">
+                            <h6>Workshop de Desenvolvimento Web</h6>
+                            <p>Aprenda técnicas modernas de desenvolvimento web</p>
+                        </div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="event-month">Mar</span>
+                            <span class="event-day">18</span>
+                        </div>
+                        <div class="event-info">
+                            <h6>UI/UX Design Meetup</h6>
+                            <p>Discussão sobre as últimas tendências de design</p>
+                        </div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="event-month">Mar</span>
+                            <span class="event-day">25</span>
+                        </div>
+                        <div class="event-info">
+                            <h6>Fundamentos do React Native</h6>
+                            <p>Noções básicas de desenvolvimento de aplicativos móveis</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal para Nova Postagem -->
+    <div class="modal fade" id="newPostModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Criar Novo Post</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="newPostForm">
+                        <div class="mb-3">
+                            <label for="postTitle" class="form-label">Título</label>
+                            <input type="text" class="form-control" id="postTitle" placeholder="Digite um título descritivo">
+                        </div>
+                        <div class="mb-3">
+                            <label for="postContent" class="form-label">Conteúdo</label>
+                            <textarea class="form-control" id="postContent" rows="5" placeholder="Descreva sua pergunta ou tópico de discussão"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="postTags" class="form-label">Tags</label>
+                            <input type="text" class="form-control" id="postTags" placeholder="Adicionar tags separadas por vírgulas (ex: React, JavaScript)">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="submitPostBtn">Post</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../javascript/comunity.js"></script>
+</body>
+</html>
