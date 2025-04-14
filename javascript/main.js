@@ -31,13 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
             // Login bem-sucedido
             alert(`Login realizado com sucesso! Bem-vindo, ${usuarioEncontrado.nome}!`, 'sucesso');
             
-            // Simula armazenamento de sessão
-            localStorage.setItem('usuarioLogado', JSON.stringify({
-                email: usuarioEncontrado.email,
-                nome: usuarioEncontrado.nome,
-                horarioLogin: new Date().toISOString()
-            }));
-            
             // Redireciona após 2 segundos (simulação)
             setTimeout(function() {
                 // Redireciona para uma página de dashboard ou home

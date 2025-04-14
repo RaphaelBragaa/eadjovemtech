@@ -59,56 +59,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Implementar funcionalidade de resposta
-    document.addEventListener('click', function(e) {
-        if (e.target.classList.contains('reply-btn')) {
-            const postId = e.target.getAttribute('data-post-id');
-            const replyForm = document.getElementById(`reply-form-${postId}`);
-            
-            if (replyForm.style.display === 'none' || replyForm.style.display === '') {
-                replyForm.style.display = 'block';
-            } else {
-                replyForm.style.display = 'none';
-            }
-        }
-    });
-    
-    // Implementar envio de resposta
-    document.addEventListener('submit', function(e) {
-        if (e.target.classList.contains('reply-form')) {
-            e.preventDefault();
-            
-            const postId = e.target.getAttribute('data-post-id');
-            const replyContent = e.target.querySelector('textarea').value;
-            
-            if (replyContent) {
-                const replyContainer = document.getElementById(`replies-${postId}`);
-                const newReply = document.createElement('div');
-                newReply.className = 'reply-item';
-                newReply.innerHTML = `
-                    <div class="d-flex mt-2">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="reply-avatar" alt="User Avatar">
-                        <div class="reply-content">
-                            <div class="d-flex justify-content-between">
-                                <h6>You</h6>
-                                <small class="text-muted">just now</small>
-                            </div>
-                            <p>${replyContent}</p>
-                        </div>
-                    </div>
-                `;
-                
-                replyContainer.appendChild(newReply);
-                e.target.querySelector('textarea').value = '';
-                e.target.style.display = 'none';
-                
-                // Atualizar contador de respostas
-                const responseCounter = document.querySelector(`[data-post-id="${postId}"]`).closest('.post-card').querySelector('.post-stats span:first-child');
-                const currentCount = parseInt(responseCounter.textContent.match(/\d+/)[0]);
-                responseCounter.innerHTML = `<i class="far fa-comment"></i> ${currentCount + 1} responses`;
-            }
-        }
-    });
     
     // Funcionalidade de filtro para categorias
     const categoryCards = document.querySelectorAll('.category-card');
@@ -127,68 +77,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
             
-            // Mudar para a aba "Categories"
+            // Mudar para a aba "Categorias"
             const categoriesTabEl = document.querySelector('a[href="#categories"]');
             const tab = new bootstrap.Tab(categoriesTabEl);
             tab.show();
         });
-    });
-    
-    // Adicionar funcionalidade de ordenação para Top Contributors
-    document.addEventListener('click', function(e) {
-        if (e.target.closest('.sidebar-title') && e.target.closest('.sidebar-title').textContent.includes('Top Contributors')) {
-            const contributorsList = document.querySelector('.sidebar-card:first-of-type');
-            const contributors = Array.from(contributorsList.querySelectorAll('.contributor-item'));
-            
-            // Alternar entre ordenação ascendente e descendente
-            const isAscending = contributorsList.getAttribute('data-order') === 'asc';
-            
-            contributors.sort((a, b) => {
-                const pointsA = parseInt(a.querySelector('span:last-child').textContent);
-                const pointsB = parseInt(b.querySelector('span:last-child').textContent);
-                
-                return isAscending ? pointsA - pointsB : pointsB - pointsA;
-            });
-            
-            // Limpar e readicionar itens ordenados
-            contributors.forEach(item => item.remove());
-            contributors.forEach(item => contributorsList.appendChild(item));
-            
-            // Atualizar atributo de ordenação
-            contributorsList.setAttribute('data-order', isAscending ? 'desc' : 'asc');
-        }
-    });
-    
-    // Adicionar funcionalidade de ordenação para Upcoming Events
-    document.addEventListener('click', function(e) {
-        if (e.target.closest('.sidebar-title') && e.target.closest('.sidebar-title').textContent.includes('Upcoming Events')) {
-            const eventsList = document.querySelector('.sidebar-card:last-of-type');
-            const events = Array.from(eventsList.querySelectorAll('.event-item'));
-            
-            // Alternar entre ordenação por data e por nome
-            const isByDate = eventsList.getAttribute('data-order') === 'date';
-            
-            events.sort((a, b) => {
-                if (isByDate) {
-                    // Ordenar por nome do evento
-                    const nameA = a.querySelector('h6').textContent;
-                    const nameB = b.querySelector('h6').textContent;
-                    return nameA.localeCompare(nameB);
-                } else {
-                    // Ordenar por data
-                    const dateA = a.querySelector('.event-day').textContent;
-                    const dateB = b.querySelector('.event-day').textContent;
-                    return parseInt(dateA) - parseInt(dateB);
-                }
-            });
-            
-            // Limpar e readicionar itens ordenados
-            events.forEach(item => item.remove());
-            events.forEach(item => eventsList.appendChild(item));
-            
-            // Atualizar atributo de ordenação
-            eventsList.setAttribute('data-order', isByDate ? 'name' : 'date');
-        }
     });
     
     // Implementar funcionalidade de pesquisa

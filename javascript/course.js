@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     const containerCategorias = document.querySelector('.browse-categories .row');
-    containerCategorias.innerHTML = ''; // Limpa o conteúdo existente
+    containerCategorias.innerHTML = ''; 
     categorias.forEach(categoria => {
         const cartaoCategoria = `
             <div class="col-md-3 mb-4">
