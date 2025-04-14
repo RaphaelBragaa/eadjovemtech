@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../styles/login.css">
+</head>
+
+<body>
+    <div class="container-cadastro">
+        <form class="cadastroform">
+            <div class="titulo-cadastro">
+                <h2>Crie sua conta</h2>
+                <p>Junte-se à nossa comunidade de aprendizado</p>
+            </div>
+
+            <label for="nome">Nome Completo</label>
+            <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
+
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" id="senha" placeholder="Crie uma senha" required>
+
+            <p class="normas-senha">
+                A senha deve ter no mínimo 8 caracteres, com 1 letra maiúscula e 1 símbolo
+            </p>
+
+            <div class="checkbox-area">
+                <input type="checkbox" id="checkbox-termos" required>
+                <label for="checkbox-termos" class="label-termos">
+                    Eu concordo com os <a href="#">Termos de Uso</a> e a <a href="#">Política de Privacidade</a>
+                </label>
+            </div>
+
+            <button type="submit" onclick="window.location.href='../index.html'">Criar Conta</button>
+        </form>
+    </div>
+
+    <script src="/assets/js/script.js"></script>
+</body>
+
+</html>

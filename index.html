@@ -3,15 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/reset.css">
-    <title>Document</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="./styles/login.css">
 </head>
+
 <body>
-    <a href="/pages/comunity.html">Comunidade</a>
-    <a href="/pages/courses.html">Cursos</a>
-    <a href="/pages/dashboard.html">Dashboard</a>
-    <a href="/pages/perfil.html">Perfil</a>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
-    <script src="./javascript/main.js"></script>
+
+    <div class="login-container">
+        <div class="logo-com-nome">
+            <img src="./assets/logo.png" alt="logoJovemTechEAD.png">
+            <h2>Login</h2>
+            <p>Aprenda quando e onde quiser</p>
+        </div>
+
+        <form class="loginform">
+            <label>E-mail</label>
+            <input type="text" placeholder="Email" id="email" required>
+            <label for="">Senha</label>
+            <input type="password" placeholder="Senha" id="senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+
+        <!-- Âncora para o cadastro -->
+        <p class="cadastro-link">
+            Não tem uma conta?<a href="./pages/signup.html"> Cadastre-se aqui</a>
+        </p>
+    </div>
+
 </body>
+<script src="./javascript/main.js"></script>
+
 </html>

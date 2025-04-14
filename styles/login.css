@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Container das telas */
+  .login-container,
+  .container-cadastro {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Logo e título da tela de login */
+  .logo-com-nome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo-com-nome h2,
+  .titulo-cadastro h2 {
+    margin: 0;
+    font-size: 25px;
+    padding-bottom: 2px;
+  }
+  
+  .logo-com-nome p,
+  .titulo-cadastro p {
+    margin: 0;
+    font-size: 13px;
+    color: #555;
+  }
+  
+  /* Imagem da logo */
+  img {
+    width: 90px;
+    height: auto;
+  }
+  
+  /* Labels dos campos */
+  label,
+  .label-termos {
+    margin: 0;
+    font-size: 14px;
+    margin-right: 180px;
+    color: #555;
+    display: block;
+    text-align: left;
+    padding-left: 20px;
+  }
+  
+  /* Inputs */
+  input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 90%;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  /* Botão */
+  button {
+    padding: 10px 20px;
+    background-color: #1EB8E8;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+  }
+  
+  button:hover {
+    background-color: #17a2c3;
+  }
+  
+  /* Link para mudar de tela */
+  .cadastro-link {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  .cadastro-link a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .cadastro-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Texto explicando regras da senha */
+  .normas-senha {
+    font-size: 12px;
+    color: #777;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  /* Área dos termos */
+  .checkbox-area {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 13px;
+    margin: 10px 0;
+    padding: 0 20px;
+  }
+  
+  .checkbox-area input[type="checkbox"] {
+    margin-top: 4px;
+    margin-right: 10px;
+  }
+  
+  .label-termos a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .label-termos a:hover {
+    text-decoration: underline;
+  }
